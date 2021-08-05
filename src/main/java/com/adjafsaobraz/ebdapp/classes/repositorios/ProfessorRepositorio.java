@@ -6,13 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.adjafsaobraz.ebdapp.classes.entidades.Aluno;
+import com.adjafsaobraz.ebdapp.classes.entidades.Professor;
 
 @Repository
-public interface AlunoRepositorio extends CrudRepository<Aluno, Integer> {
+public interface ProfessorRepositorio extends CrudRepository<Professor, Integer> {
 
 	
-	@Query(value = "select * from classes.tb_aluno", nativeQuery = true)
-	public List<Aluno> listarTodos();
+	@Query(value = "select * from classes.tb_professor", nativeQuery = true)
+	public List<Professor> listarTodos();
 	
 }

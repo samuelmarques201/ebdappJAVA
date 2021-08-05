@@ -2,8 +2,6 @@ package com.adjafsaobraz.ebdapp.classes.rotas;
 
 import java.util.List;
 
-import javax.servlet.annotation.HttpMethodConstraint;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.adjafsaobraz.ebdapp.classes.entidades.Aluno;
-import com.adjafsaobraz.ebdapp.classes.servicos.AlunoService;
+import com.adjafsaobraz.ebdapp.classes.entidades.Professor;
+import com.adjafsaobraz.ebdapp.classes.servicos.ProfessorService;
 
 @RestController
-@RequestMapping("/alunos")
-public class AlunoControlador {
+@RequestMapping("/professor")
+public class ProfessorControlador {
 
 	@Autowired
-	private AlunoService service;
+	private ProfessorService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Aluno>> buscarTodos(){
+	public ResponseEntity<List<Professor>> buscarTodos(){
 		return ResponseEntity.ok(service.buscarTodos());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Aluno> DeletarPorId(@PathVariable Integer id){
+	public ResponseEntity<Professor> DeletarPorId(@PathVariable Integer id){
 		return ResponseEntity.ok(service.procurarPorId(id));
 	}
 	
@@ -40,12 +38,12 @@ public class AlunoControlador {
 		service.DeletarPorId(id);
 	}
 	@PostMapping
-	public ResponseEntity<Aluno> adicionarAluno(@RequestBody Aluno aluno){
-		return ResponseEntity.status(201).body(service.inserirAluno(aluno));
+	public ResponseEntity<Professor> adicionarAluno(@RequestBody Professor professor){
+		return ResponseEntity.status(201).body(service.inserirProfessor(professor));
 	}
 	@PutMapping
-	public ResponseEntity<Aluno> modificarAluno(@RequestBody Aluno aluno){
-		return ResponseEntity.ok(service.modificarAluno(aluno));
+	public ResponseEntity<Professor> modificarAluno(@RequestBody Professor professor){
+		return ResponseEntity.ok(service.modificarProfessor(professor));
 	}
 	
 }
