@@ -23,12 +23,12 @@ public class Professor {
 	@Column(name = "ds_contato")
 	private String dsContato;
 
-	public Integer getIdAluno() {
+	public Integer getIdProfessor() {
 		return idProfessor;
 	}
 
-	public void setIdAluno(Integer idAluno) {
-		this.idProfessor = idAluno;
+	public void setIdProfessor(Integer idProfessor) {
+		this.idProfessor = idProfessor;
 	}
 
 	public String getDsNome() {
