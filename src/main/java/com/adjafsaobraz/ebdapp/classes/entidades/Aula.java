@@ -24,7 +24,31 @@ public class Aula {
 	
 	@Column(name = "cd_sala")
 	private Integer cdSala;
-	
+
+	public Integer getIdAula() {
+		return IdAula;
+	}
+
+	public void setIdAula(Integer idAula) {
+		IdAula = idAula;
+	}
+
+	public String getDsNome() {
+		return dsNome;
+	}
+
+	public void setDsNome(String dsNome) {
+		this.dsNome = dsNome;
+	}
+
+	public Date getDtData() {
+		return dtData;
+	}
+
+	public void setDtData(Date dtData) {
+		this.dtData = dtData;
+	}
+
 	public Integer getCdSala() {
 		return cdSala;
 	}
@@ -32,6 +56,8 @@ public class Aula {
 	public void setCdSala(Integer cdSala) {
 		this.cdSala = cdSala;
 	}
+	
+	
 	
 
 }

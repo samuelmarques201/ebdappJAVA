@@ -27,6 +27,8 @@ public class Professor {
 	@Column(name = "cd_sala")
 	private Integer cdSala;
 	
+
+
 	public Integer getCdSala() {
 		return cdSala;
 	}

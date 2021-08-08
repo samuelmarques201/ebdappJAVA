@@ -27,8 +27,8 @@ public class SalaServices {
 		return null;
 	}
 
-	public Sala inserirAluno(Sala aula) {
-		return repositorio.save(aula);
+	public Sala inserirAluno(Sala sala) {
+		return repositorio.save(sala);
 	}
 	
 	public Sala modificarAluno(Sala aula) {

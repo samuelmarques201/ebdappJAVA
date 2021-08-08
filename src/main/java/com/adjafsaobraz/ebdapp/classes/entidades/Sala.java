@@ -15,8 +15,22 @@ public class Sala {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_sala")
-	private Integer IdAula;
+	private Integer idSala;
 	@Column(name = "ds_nome")
 	private String dsNome;
+	public Integer getIdSala() {
+		return idSala;
+	}
+	public void setIdSala(Integer idSala) {
+		this.idSala = idSala;
+	}
+	public String getDsNome() {
+		return dsNome;
+	}
+	public void setDsNome(String dsNome) {
+		this.dsNome = dsNome;
+	}
+
+	
 	
 }

@@ -38,8 +38,9 @@ public class SalaControlador {
 		service.DeletarPorId(id);
 	}
 	@PostMapping
-	public ResponseEntity<Sala> adicionarAluno(@RequestBody Sala aula){
-		return ResponseEntity.status(201).body(service.inserirAluno(aula));
+	public ResponseEntity<Sala> adicionarAluno(@RequestBody Sala sala){
+		System.out.println(sala.getDsNome());
+		return ResponseEntity.status(201).body(service.inserirAluno(sala));
 	}
 	@PutMapping
 	public ResponseEntity<Sala> modificarAluno(@RequestBody Sala aula){
