@@ -22,5 +22,16 @@ public class Aula {
 	@Column(name = "dt_data")
 	private Date dtData;
 	
+	@Column(name = "cd_sala")
+	private Integer cdSala;
+	
+	public Integer getCdSala() {
+		return cdSala;
+	}
+
+	public void setCdSala(Integer cdSala) {
+		this.cdSala = cdSala;
+	}
+	
 
 }

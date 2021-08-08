@@ -22,6 +22,17 @@ public class Aluno {
 
 	@Column(name = "ds_contato")
 	private String dsContato;
+	
+	@Column(name = "cd_sala")
+	private Integer cdSala;
+	
+	public Integer getCdSala() {
+		return cdSala;
+	}
+
+	public void setCdSala(Integer cdSala) {
+		this.cdSala = cdSala;
+	}
 
 	public Integer getIdAluno() {
 		return idAluno;
