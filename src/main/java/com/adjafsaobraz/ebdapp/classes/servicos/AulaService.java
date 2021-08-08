@@ -1,15 +1,12 @@
 package com.adjafsaobraz.ebdapp.classes.servicos;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.adjafsaobraz.ebdapp.classes.entidades.Aluno;
 import com.adjafsaobraz.ebdapp.classes.entidades.Aula;
-import com.adjafsaobraz.ebdapp.classes.repositorios.AlunoRepositorio;
 import com.adjafsaobraz.ebdapp.classes.repositorios.AulaRepositorio;
 
 @Service
