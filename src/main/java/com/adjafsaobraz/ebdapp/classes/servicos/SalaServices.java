@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.adjafsaobraz.ebdapp.classes.entidades.Sala;
 import com.adjafsaobraz.ebdapp.classes.repositorios.SalaRepositorio;
 
+import projecoes.ComboSalaAlunos;
+
 @Service
 public class SalaServices {
 
@@ -18,6 +20,11 @@ public class SalaServices {
 	public List<Sala> buscarTodos() {
 		List<Sala> sala = repositorio.listarTodos();
 		return sala;
+	}
+	
+	public List<ComboSalaAlunos> consultar(String dsSala){
+		List<ComboSalaAlunos> salaAlunos = repositorio.consultar(null);
+		return salaAlunos;
 	}
 
 	public Sala procurarPorId(Integer id) {

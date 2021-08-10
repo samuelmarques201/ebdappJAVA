@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.adjafsaobraz.ebdapp.classes.entidades.Sala;
 import com.adjafsaobraz.ebdapp.classes.servicos.SalaServices;
 
+import projecoes.ComboSalaAlunos;
+
 @RestController
 @RequestMapping("/salas")
 public class SalaControlador {
@@ -28,6 +30,11 @@ public class SalaControlador {
 		return ResponseEntity.ok(service.buscarTodos());
 	}
 	
+	@GetMapping("alunos")
+	public ResponseEntity<List<ComboSalaAlunos>> consultarSalaAlunos(){
+		return ResponseEntity.ok(service.consultar(null));
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Sala> DeletarPorId(@PathVariable Integer id){
 		return ResponseEntity.ok(service.procurarPorId(id));
@@ -37,6 +44,9 @@ public class SalaControlador {
 	public void buscarTodos(@PathVariable Integer id){
 		service.DeletarPorId(id);
 	}
+	
+	
+	
 	@PostMapping
 	public ResponseEntity<Sala> adicionarAluno(@RequestBody Sala sala){
 		System.out.println(sala.getDsNome());
