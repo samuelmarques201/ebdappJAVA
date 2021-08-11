@@ -1,5 +1,6 @@
 package com.adjafsaobraz.ebdapp.classes.servicos;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +29,7 @@ public class AulaService {
 	}
 
 	public Aula inserirAluno(Aula aula) {
+		aula.setDtData(new Date());
 		return repositorio.save(aula);
 	}
 	
